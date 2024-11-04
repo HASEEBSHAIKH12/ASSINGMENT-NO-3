@@ -1,0 +1,299 @@
+CODE NO:1 #include <stdio.h>
+#include <conio.h>
+
+int main () {
+    float mathscore, sciencescore;
+
+    printf("Enter the match score (out of 100):");
+    scanf("%f", &mathscore);
+
+    printf("Enter the science score (out of 100):");
+    scanf("%f",&sciencescore);
+
+    if (mathscore >50 && sciencescore >50) {
+        printf("The student is eligible for admission.\n");
+    } else {
+        printf("The student is not eligible for the admission.\n ");
+    }
+    
+    if (mathscore >=80 && sciencescore>=80) {
+        printf("The student is qualifies for the scholarship.\n");
+    } else {
+        printf("The student is not qualify for the scholarship.\n");
+    }
+    getch ();
+ }
+2. Electricity Bill Calculator
+
+#include <stdio.h>
+
+int main() {
+    int units;
+    float bill = 0;
+
+    printf("Enter units consumed: ");
+    scanf("%d", &units);
+
+    if (units <= 100) {
+        bill = 0;
+    } else if (units <= 200) {
+        bill = (units - 100) * 5;
+    } else if (units <= 300) {
+        bill = 500 + (units - 200) * 8;
+    } else {
+        bill = 1300 + (units - 300) * 10;
+    }
+
+    printf("Electricity bill: Rs. %.2f\n", bill);
+
+    return 0;
+}
+3. Blood Donation Eligibility
+
+#include <stdio.h>
+
+int main() {
+    int age;
+    float weight;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    printf("Enter weight (in kg): ");
+    scanf("%f", &weight);
+
+    if (age >= 18 && age <= 65 && weight >= 50) {
+        printf("Eligible for blood donation.\n");
+    } else {
+        printf("Not eligible for blood donation.\n");
+    }
+
+    return 0;
+}
+
+
+4. Income Tax Calculator
+
+#include <stdio.h>
+
+int main() {
+    float income, tax = 0;
+
+    printf("Enter income: ");
+    scanf("%f", &income);
+
+    if (income > 1000000) {
+        tax = (income - 1000000) * 0.15 + 50000;
+    } else if (income > 500000) {
+        tax = (income - 500000) * 0.10 + 25000;
+    } else if (income > 250000) {
+        tax = (income - 250000) * 0.05;
+    }
+
+    printf("Income tax: Rs. %.2f\n", tax);
+
+    return 0;
+}
+
+
+5. Bank ATM Withdrawal Eligibility
+
+#include <stdio.h>
+
+int main() {
+    float balance, withdrawal;
+    char permit;
+
+    printf("Enter account balance: ");
+    scanf("%f", &balance);
+
+    printf("Enter withdrawal amount: ");
+    scanf("%f", &withdrawal);
+
+    if (balance >= withdrawal) {
+        if (withdrawal > 10000) {
+            printf("Do you have a special withdrawal permit? (Y/N): ");
+            scanf(" %c", &permit);
+
+            if (permit == 'Y' || permit == 'y') {
+                printf("Withdrawal approved.\n");
+            } else {
+                printf("Withdrawal denied.\n");
+            }
+        } else {
+            printf("Withdrawal approved.\n");
+        }
+    } else {
+        printf("Insufficient balance.\n");
+    }
+
+    return 0;
+}
+
+
+6. Student Grade with Pass/Fail Status
+
+#include <stdio.h>
+
+int main() {
+    float marks1, marks2, marks3, average;
+
+    printf("Enter marks in subject 1: ");
+    scanf("%f", &marks1);
+
+    printf("Enter marks in subject 2: ");
+    scanf("%f", &marks2);
+
+    printf("Enter marks in subject 3: ");
+    scanf("%f", &marks3);
+
+    average = (marks1 + marks2 + marks3) / 3;
+
+    if (average >= 75) {
+        printf("Grade: A\n");
+    } else if (average >= 50) {
+        printf("Grade: B\n");
+    } else {
+        printf("Failed\n");
+    }
+
+    return 0;
+}
+8:ONLINE DISCOUNT SHOPPING:
+
+
+#include <stdio.h>
+#include <conio.h>
+
+int main () {
+    float purchase_amount, final_amount;
+    char is_member;
+
+    printf("Enter the purchase amount :");
+    scanf("%f",&purchase_amount);
+
+    if (purchase_amount > 2000) {
+        printf("Are you member? (Y/N): ");
+        scanf("%c", &is_member);} {
+
+        if (is_member == 'y' || is_member == 'Y') {
+            final_amount = purchase_amount * 0.80;
+            printf("Your are member. You get 20%% discount.\n");
+        } else {
+            final_amount = purchase_amount * 0.90;
+            printf("Your are not member. You get 10%% discount.\n");
+        }
+    } else {
+        final_amount = purchase_amount;
+        printf("No discount applied a the amount is less than or equal to 2000.\n");
+    }
+
+    printf("The final amount after discount is: %.2f\n", final_amount);
+
+    printf("Press any key to exit...\n");
+
+    getch();
+
+    return 0;
+}
+7: HEALTH INSHURANCE ELIGIBLIT#include <stdio.h>
+#include <conio.h>
+int main() {
+    int age;
+    char seriousIllness;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if (age > 18) {
+        if (age > 45) {
+            printf("Have you had any serious illness? (Y/N): ");
+            scanf(" %c", &seriousIllness); 
+            
+            if (seriousIllness == 'Y' || seriousIllness == 'y') {
+                printf("You are not eligible for health insurance.\n");
+            } else if (seriousIllness == 'N' || seriousIllness == 'n') {
+                printf("You are eligible for health insurance.\n");
+            } else {
+                printf("Invalid input. Please enter 'Y' or 'N'.\n");
+            }
+        } else {
+            printf("You are eligible for health insurance.\n");
+        }
+    } else {
+        printf("You are not eligible for health insurance.\n");
+    }
+
+    getch();
+}
+9:WEEK DAY CHECKER:-
+#include <stdio.h>
+#include <conio.h>
+int main() {
+    int age;
+    char seriousIllness;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if (age > 18) {
+        if (age > 45) {
+            printf("Have you had any serious illness? (Y/N): ");
+            scanf(" %c", &seriousIllness); 
+            
+            if (seriousIllness == 'Y' || seriousIllness == 'y') {
+                printf("You are not eligible for health insurance.\n");
+            } else if (seriousIllness == 'N' || seriousIllness == 'n') {
+                printf("You are eligible for health insurance.\n");
+            } else {
+                printf("Invalid input. Please enter 'Y' or 'N'.\n");
+            }
+        } else {
+            printf("You are eligible for health insurance.\n");
+        }
+    } else {
+        printf("You are not eligible for health insurance.\n");
+    }
+
+    getch();
+}
+10: BANK LOAN APPROVAL:-#include <stdio.h>
+#include <string.h>
+
+int main() {
+    float monthlyIncome;
+    char hasExistingLoan[4]; 
+    int overduePayments;
+
+    printf("Enter your monthly income: ");
+    scanf("%f", &monthlyIncome);
+
+    if (monthlyIncome > 30000) {
+        printf("Do you have an existing loan? (Yes/No): ");
+        scanf("%s", hasExistingLoan);
+
+        if (strcmp(hasExistingLoan, "Yes") == 0) {
+            printf("Do you have any overdue payments? (1 for Yes, 0 for No): ");
+            scanf("%d", &overduePayments);
+
+            if (overduePayments == 0) {
+                printf("Congratulations! You are eligible for the loan.\n");
+            } else {
+                printf("You are not eligible for the loan due to overdue payments.\n");
+            }
+        } else if (strcmp(hasExistingLoan, "No") == 0) {
+            printf("Congratulations! You are eligible for the loan.\n");
+        } else {
+            printf("Invalid input for existing loan status. Please enter 'Yes' or 'No'.\n");
+        }
+    } else {
+        printf("You are not eligible for the loan due to insufficient income.\n");
+    }
+    printf("Press Enter to exit...\n");
+    getchar();
+    getchar();
+
+    return 0;
+}
+
+
